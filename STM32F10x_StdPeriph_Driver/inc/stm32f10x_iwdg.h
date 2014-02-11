@@ -117,7 +117,7 @@
   */
 
 void IWDG_WriteAccessCmd(uint16_t IWDG_WriteAccess);
-void IWDG_SetPrescaler(uint8_t IWDG_Prescaler);
+void IWDG_SetPrescaler(uint16_t IWDG_Prescaler);
 void IWDG_SetReload(uint16_t Reload);
 void IWDG_ReloadCounter(void);
 void IWDG_Enable(void);
