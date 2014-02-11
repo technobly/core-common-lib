@@ -70,13 +70,13 @@
   * @{
   */
 
-#define IWDG_Prescaler_4            ((uint8_t)0x00)
-#define IWDG_Prescaler_8            ((uint8_t)0x01)
-#define IWDG_Prescaler_16           ((uint8_t)0x02)
-#define IWDG_Prescaler_32           ((uint8_t)0x03)
-#define IWDG_Prescaler_64           ((uint8_t)0x04)
-#define IWDG_Prescaler_128          ((uint8_t)0x05)
-#define IWDG_Prescaler_256          ((uint8_t)0x06)
+#define IWDG_Prescaler_4            ((uint16_t)0x0000)
+#define IWDG_Prescaler_8            ((uint16_t)0x0001)
+#define IWDG_Prescaler_16           ((uint16_t)0x0002)
+#define IWDG_Prescaler_32           ((uint16_t)0x0003)
+#define IWDG_Prescaler_64           ((uint16_t)0x0004)
+#define IWDG_Prescaler_128          ((uint16_t)0x0005)
+#define IWDG_Prescaler_256          ((uint16_t)0x0006)
 #define IS_IWDG_PRESCALER(PRESCALER) (((PRESCALER) == IWDG_Prescaler_4)  || \
                                       ((PRESCALER) == IWDG_Prescaler_8)  || \
                                       ((PRESCALER) == IWDG_Prescaler_16) || \

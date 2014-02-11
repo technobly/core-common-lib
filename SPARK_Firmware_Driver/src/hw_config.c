@@ -329,8 +329,8 @@ void IWDG_Reset_Enable(uint32_t msTimeout)
 {
 	uint16_t Reload_Value;
 
-	if(msTimeout > 10000)
-		msTimeout = 10000;	//Max IWDG timeout that can be set is 10 sec
+	if(msTimeout > 26208)
+		msTimeout = 26208;	//Max IWDG timeout that can be set is 26.208 sec
 
 	/* Enable write access to IWDG_PR and IWDG_RLR registers */
 	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
@@ -342,6 +342,9 @@ void IWDG_Reset_Enable(uint32_t msTimeout)
 	Reload_Value = (uint16_t)((msTimeout * 40) / 256); //Assuming LSI Frequency = 40000
 
 	IWDG_SetReload(Reload_Value);
+
+	/* Disable write access to IWDG_PR and IWDG_RLR registers */
+	IWDG_WriteAccessCmd(IWDG_WriteAccess_Disable);
 
 	/* Reload IWDG counter */
 	IWDG_ReloadCounter();

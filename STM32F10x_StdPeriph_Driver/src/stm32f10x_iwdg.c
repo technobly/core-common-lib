@@ -111,7 +111,7 @@ void IWDG_WriteAccessCmd(uint16_t IWDG_WriteAccess)
   *     @arg IWDG_Prescaler_256: IWDG prescaler set to 256
   * @retval None
   */
-void IWDG_SetPrescaler(uint8_t IWDG_Prescaler)
+void IWDG_SetPrescaler(uint16_t IWDG_Prescaler)
 {
   /* Check the parameters */
   assert_param(IS_IWDG_PRESCALER(IWDG_Prescaler));
