@@ -237,7 +237,6 @@ extern uint8_t USE_SYSTEM_FLAGS;
 extern __IO uint32_t TimingDelay;
 extern __IO uint32_t TimingLED;
 extern __IO uint32_t TimingBUTTON;
-extern __IO uint32_t TimingIWDGReload;
 
 extern __IO uint8_t IWDG_SYSTEM_RESET;
 
